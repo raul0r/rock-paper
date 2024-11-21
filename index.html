@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scisors</title>
-    <script src="script.js" defer></script>
-    
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="script.js"></script> <!-- Use 'defer' to ensure the script runs after the HTML is loaded -->
 </head>
 <body>
-    <h1>Rock, paper, scissors</h1>
+    <div>
+        <h1>Rock, paper, scissors</h1>
+        <p>Click the button to start playing.</p>
+        <button id="myButton">Start Game</button>
+    </div>
 
-    <p>Click the button to start playing.</p>
-    <button id="myButton">Click Me!</button>
-    
+    <div class="scores-container">
+        <div class="score-box">
+            <div class="box" id="cpuScore">0</div>
+            <p class="score-title">CPU score</p>
+        </div>
+        <div class="score-box">
+            <div class="box" id="userScore">0</div>
+            <p class="score-title">User score</p>
+        </div>
+    </div>
+
+    <div id="winnerBox" class="winner-box" style="display: none;">
+        <h2 id="winnerMessage">Winner will be shown here</h2>
+    </div>
 </body>
 </html>
