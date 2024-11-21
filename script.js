@@ -2,9 +2,18 @@ let computerChoice;
 let userChoice;
 let computerScore; 
 let userScore;
+let luckyChoice;
+
+document.getElementById("myButton").addEventListener("click", gameStart);
+
+function gameStart() {
+    //will work on this later
+}
+
+//Create computer choice with function
 
 function getComputerChoice() {
-    let luckyChoice = Math.random();
+    luckyChoice = Math.random();
     if luckyChoice >= 0.66 {
         computerChoice = "Rock";
     }
@@ -22,9 +31,10 @@ function getComputerChoice() {
 console.log("Welcome to the game. Please press enter to continue");
 console.log("The computer choice is ready, please enter your input");
 
-//Create computer choice with function
+
 
 //Ask for user choice 
+prompt()
 
 //Compare the choices
 
