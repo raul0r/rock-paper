@@ -5,28 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script defer src="script.js"></script> <!-- Use 'defer' to ensure the script runs after the HTML is loaded -->
+    <script defer src="script.js"></script> <!-- 'defer' ensures the script runs after the HTML is loaded -->
 </head>
 <body>
-    <div>
-        <h1>Rock, paper, scissors</h1>
-        <p>Click the button to start playing.</p>
-        <button id="myButton">Start Game</button>
-    </div>
+    <div id="game">
+        <h1>Rock 🪨, Paper 📄, Scissors ✂️</h1>
+        <p>Choose your move below to start playing!</p>
 
-    <div class="scores-container">
-        <div class="score-box">
-            <div class="box" id="cpuScore">0</div>
-            <p class="score-title">CPU score</p>
+        <!-- Choices Section -->
+        <div class="choices">
+            <button class="choice" data-choice="rock">🪨 Rock</button>
+            <button class="choice" data-choice="paper">📄 Paper</button>
+            <button class="choice" data-choice="scissors">✂️ Scissors</button>
         </div>
-        <div class="score-box">
-            <div class="box" id="userScore">0</div>
-            <p class="score-title">User score</p>
-        </div>
-    </div>
 
-    <div id="winnerBox" class="winner-box" style="display: none;">
-        <h2 id="winnerMessage">Winner will be shown here</h2>
+        <!-- Scores Section -->
+        <div class="scores-container">
+            <div class="score-box">
+                <div class="box" id="cpuScore">0</div>
+                <p class="score-title">CPU Score</p>
+            </div>
+            <div class="score-box">
+                <div class="box" id="userScore">0</div>
+                <p class="score-title">Your Score</p>
+            </div>
+        </div>
+
+        <!-- Winner Section -->
+        <div id="winnerBox" class="winner-box" style="display: none;">
+            <h2 id="winnerMessage">Winner will be shown here</h2>
+        </div>
+
+        <!-- Reset Button -->
+        <button id="resetButton" style="display: none;">Restart Game</button>
+
+        <!-- History Section -->
+        <ul id="history" class="history">
+            <!-- Game history will appear here -->
+        </ul>
     </div>
 </body>
 </html>
